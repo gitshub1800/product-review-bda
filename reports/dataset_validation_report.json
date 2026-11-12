@@ -1,0 +1,68 @@
+{
+  "audit_timestamp": "2026-11-12 20:12:38",
+  "total_files": 2,
+  "total_downloaded_bytes": 2487296519,
+  "total_downloaded_gb": 2.316,
+  "total_records": 5146044,
+  "requirement_2gb_satisfied": true,
+  "per_category_statistics": [
+    {
+      "category": "Appliances",
+      "file_path": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\dataset\\raw\\Appliances.jsonl",
+      "file_size_bytes": 929451412,
+      "file_size_gb": 0.8656,
+      "total_records": 2128605,
+      "valid_ratings_count": 2128605,
+      "ratings_distribution": {
+        "1.0": 250453,
+        "2.0": 79664,
+        "3.0": 104047,
+        "4.0": 208216,
+        "5.0": 1486225
+      },
+      "null_empty_text_count": 2065,
+      "approx_unique_products": 94319,
+      "sample_schema_keys": [
+        "rating",
+        "title",
+        "text",
+        "images",
+        "asin",
+        "parent_asin",
+        "user_id",
+        "timestamp",
+        "helpful_vote",
+        "verified_purchase"
+      ]
+    },
+    {
+      "category": "Musical_Instruments",
+      "file_path": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\dataset\\raw\\Musical_Instruments.jsonl",
+      "file_size_bytes": 1557845107,
+      "file_size_gb": 1.4509,
+      "total_records": 3017439,
+      "valid_ratings_count": 3017439,
+      "ratings_distribution": {
+        "1.0": 264352,
+        "2.0": 131441,
+        "3.0": 197131,
+        "4.0": 400387,
+        "5.0": 2024128
+      },
+      "null_empty_text_count": 2830,
+      "approx_unique_products": 100000,
+      "sample_schema_keys": [
+        "rating",
+        "title",
+        "text",
+        "images",
+        "asin",
+        "parent_asin",
+        "user_id",
+        "timestamp",
+        "helpful_vote",
+        "verified_purchase"
+      ]
+    }
+  ]
+}

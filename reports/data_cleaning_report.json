@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-11-12 20:17:22",
+  "total_input_records": 5146044,
+  "total_processed_records": 5124820,
+  "processed_file_size_bytes": 1449950718,
+  "processed_file_size_gb": 1.35,
+  "total_elapsed_seconds": 276.19,
+  "per_category_statistics": [
+    {
+      "category": "Appliances",
+      "total_read": 2128605,
+      "total_written": 2108677,
+      "invalid_ratings": 0,
+      "missing_fields": 0,
+      "duplicates": 18930,
+      "empty_texts": 998,
+      "elapsed_seconds": 100.8
+    },
+    {
+      "category": "Musical_Instruments",
+      "total_read": 3017439,
+      "total_written": 3016143,
+      "invalid_ratings": 0,
+      "missing_fields": 0,
+      "duplicates": 0,
+      "empty_texts": 1296,
+      "elapsed_seconds": 175.39
+    }
+  ]
+}

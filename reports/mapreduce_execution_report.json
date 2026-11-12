@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-11-12 20:23:12",
+  "hadoop_version": "Apache Hadoop 3.3.6",
+  "mode": "Pseudo-distributed / Native MapReduce Streaming",
+  "total_jobs_executed": 4,
+  "successful_jobs": 4,
+  "total_mapreduce_duration_seconds": 244.21,
+  "job_details": [
+    {
+      "job_id": "job1_average_rating",
+      "name": "Algorithm 1: Average Product Rating",
+      "status": "SUCCESS",
+      "duration_seconds": 76.12,
+      "output_records": 307843,
+      "result_file": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\results\\algorithm_1_average_ratings.tsv"
+    },
+    {
+      "job_id": "job2_most_reviewed",
+      "name": "Algorithm 2: Most Reviewed Products",
+      "status": "SUCCESS",
+      "duration_seconds": 64.39,
+      "output_records": 307843,
+      "result_file": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\results\\algorithm_2_most_reviewed_all.tsv"
+    },
+    {
+      "job_id": "job3_category_analysis",
+      "name": "Algorithm 3: Category-Wise Rating Analysis",
+      "status": "SUCCESS",
+      "duration_seconds": 67.78,
+      "output_records": 2,
+      "result_file": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\results\\algorithm_3_category_analysis.tsv"
+    },
+    {
+      "job_id": "job4_word_frequency",
+      "name": "Algorithm 4: Word Frequency Analysis",
+      "status": "SUCCESS",
+      "duration_seconds": 35.42,
+      "output_records": 47264,
+      "result_file": "C:\\Users\\shaik\\.gemini\\antigravity\\scratch\\BDA_Product_Review_Analytics\\results\\algorithm_4_word_frequency_all.tsv"
+    }
+  ]
+}

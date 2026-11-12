@@ -1,0 +1,106 @@
+{
+  "project_title": "Product Review Analytics and Rating Aggregation Using Hadoop and MapReduce",
+  "assignment_number": "11.7",
+  "execution_environment": {
+    "os": "Windows 11 (Build 26300, 64-bit)",
+    "cpu_cores": 12,
+    "ram_total_gb": 15.71,
+    "ram_free_gb": 6.06,
+    "disk_free_gb": 370.97,
+    "python_version": "3.11.9",
+    "java_version": "OpenJDK 11.0.33 (Temurin)",
+    "hadoop_version": "Apache Hadoop 3.3.6"
+  },
+  "dataset_metrics": {
+    "dataset_name": "Amazon Reviews 2023 (McAuley Lab, UCSD)",
+    "categories": ["Appliances.jsonl", "Musical_Instruments.jsonl"],
+    "raw_downloaded_size_bytes": 2487296519,
+    "raw_downloaded_size_gb": 2.316,
+    "total_input_records": 5146044,
+    "appliances_raw_records": 2128605,
+    "musical_instruments_raw_records": 3017439,
+    "requirement_2gb_satisfied": true
+  },
+  "preprocessing_metrics": {
+    "total_processed_records": 5124820,
+    "appliances_cleaned_records": 2108677,
+    "musical_instruments_cleaned_records": 3016143,
+    "processed_file_size_bytes": 1449950718,
+    "processed_file_size_gb": 1.350,
+    "preprocessing_execution_time_seconds": 276.19
+  },
+  "hdfs_metrics": {
+    "hdfs_structure": [
+      "/bda_project/input",
+      "/bda_project/processed",
+      "/bda_project/output",
+      "/bda_project/reports"
+    ],
+    "uploaded_file": "/bda_project/input/cleaned_reviews.tsv",
+    "uploaded_bytes": 1449950718,
+    "upload_time_seconds": 18.2
+  },
+  "mapreduce_metrics": {
+    "total_execution_time_seconds": 244.21,
+    "jobs": [
+      {
+        "algorithm": "Algorithm 1: Average Product Rating",
+        "mapper": "mapper_average.py",
+        "reducer": "reducer_average.py",
+        "duration_seconds": 82.1,
+        "input_splits": 44,
+        "output_records": 182645
+      },
+      {
+        "algorithm": "Algorithm 2: Most Reviewed Products",
+        "mapper": "mapper_review_count.py",
+        "reducer": "reducer_review_count.py",
+        "duration_seconds": 74.3,
+        "input_splits": 44,
+        "output_records": 182645,
+        "top_product": "B0B3DB5HTC (11,913 reviews)"
+      },
+      {
+        "algorithm": "Algorithm 3: Category-Wise Rating Analysis",
+        "mapper": "mapper_category.py",
+        "reducer": "reducer_category.py",
+        "duration_seconds": 52.4,
+        "input_splits": 44,
+        "output_records": 2,
+        "category_results": {
+          "Appliances": {"reviews": 2108677, "avg_rating": 4.22},
+          "Musical_Instruments": {"reviews": 3016143, "avg_rating": 4.26}
+        }
+      },
+      {
+        "algorithm": "Algorithm 4: Word Frequency Analysis",
+        "mapper": "mapper_word_frequency.py",
+        "reducer": "reducer_word_frequency.py",
+        "duration_seconds": 35.42,
+        "output_unique_words": 47264,
+        "top_words": ["great (92,037)", "works (56,524)", "good (56,270)", "easy (49,926)", "fit (48,826)"]
+      }
+    ]
+  },
+  "machine_learning_metrics": {
+    "model": "Multinomial Naive Bayes (alpha=0.5)",
+    "feature_extraction": "TF-IDF (15,000 features, n-grams 1-2, sublinear TF)",
+    "sample_size": 100000,
+    "train_samples": 80000,
+    "test_samples": 20000,
+    "accuracy": 0.9019,
+    "precision_weighted": 0.8866,
+    "recall_weighted": 0.9019,
+    "f1_score_weighted": 0.8876,
+    "precision_macro": 0.7453,
+    "recall_macro": 0.6117,
+    "f1_score_macro": 0.6411,
+    "training_time_seconds": 0.13,
+    "feature_extraction_time_seconds": 14.90,
+    "confusion_matrix": [
+      {"actual": "Positive", "pred_pos": 16297, "pred_neu": 110, "pred_neg": 270},
+      {"actual": "Neutral", "pred_pos": 640, "pred_neu": 173, "pred_neg": 258},
+      {"actual": "Negative", "pred_pos": 659, "pred_neu": 25, "pred_neg": 1568}
+    ]
+  }
+}
